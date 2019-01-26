@@ -7,6 +7,8 @@ Hx0=[]
 Hx1=[]
 A=0.99
 B=0.01
+Px0.append(1)
+Hx0.append(0)
 
 for i in range(99):
     V = math.log(A,2)
@@ -18,13 +20,16 @@ for i in range(99):
    # Hx1.append(-A*(math.log(A,2)) -B*(math.log(B,2)))
     A -= 0.01
     B += 0.01
-   
+
+Px0.append(0)
+Hx0.append(0)
+
 for i in range(20):
     print()
     print("P(x): ",end="")
     for j in range(5):
         print(str(Px0[j*i+i])+",",end="")
-print()        
+print()         
 print("=======================================================================================================")      
 for i in range(20):
     print()
